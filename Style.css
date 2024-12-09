@@ -1,0 +1,330 @@
+/* General Styles */
+*{
+    font-family: newfont;
+}
+body,head{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: newfont;
+    src: url(agency-fb/AGENCYB.TTF);
+}
+main{
+    font-family: newfont;
+    margin: 15px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 37px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+logo > a {
+ 
+    color: white;
+}
+
+.menu {
+    display: none; /* Initially hidden for mobile view */
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu.active {
+    display: flex; /* Show the menu when active */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px; /* Spacious layout */
+    background: #f9f9f9; /* Soft white background */
+    border-radius: 15px; /* Smooth edges for a modern touch */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .text-content {
+    flex: 1;
+    margin-right: 30px;
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    color: #222; /* Dark gray for a softer black */
+  }
+  
+  .text-content h1 {
+    font-size: 40px;
+    font-weight: 800; /* Bold for a strong impact */
+    color: #000; /* Pure black heading */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Gives a strong, formal look */
+  }
+  
+  .text-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #444; /* Medium gray for subtlety */
+  }
+  
+  .text-content span {
+    font-weight: 700;
+    color: #000; /* Bold black for highlighting */
+  }
+  
+  .image-content {
+    flex: -2;
+    text-align: center;
+  }
+  
+  .image-content img {
+    max-width: 300px; /* Scales image appropriately */
+    height: auto;
+    border-radius: 10px; /* Slightly rounded edges */
+    border: 2px solid #000; /* Black border for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  }
+  .whatss img{
+    border: none;
+  }
+  
+  .image-content img:hover {
+     transform: translateY(-15px);
+     filter: brightness(1.2);/* Subtle zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+  }
+  span > a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .text-content span.Highlighted {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  .text-content span.Highlighted:hover{
+    font-weight: 500px;
+    color: #000; /* Bold black for highlighting */
+    transform: scale(1.2);
+    filter: brightness(1.2);/* Subtle zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+  }
+  /* WhatsApp Icon Container */
+  .whatsapp-icon {
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Required for hover pseudo-elements */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+/* Styling the WhatsApp Icon */
+.whatsapp-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* If you want a circular shape */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5)); /* Shape shadow */
+}
+
+/* Hover Effects for WhatsApp Icon */
+.whatsapp-icon:hover img {
+  transform: scale(1.2); /* Slightly enlarges the icon */
+  filter: drop-shadow(5px 5px 15px rgba(37, 211, 102, 0.8)); /* Greenish glow effect */
+}
+
+/* Adding a Pulse Glow Effect */
+.whatsapp-icon:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Matches the icon shape */
+  border: 2px solid rgba(37, 211, 102, 0.5); /* Green WhatsApp color */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+.insta-icon {
+  width: 90px;
+  height: 90px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Required for hover pseudo-elements */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling the WhatsApp Icon */
+.insta-icon img {
+width: 100%;
+height: auto;
+border-radius: 50%; /* If you want a circular shape */
+transition: transform 0.3s ease, filter 0.3s ease;
+filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5)); /* Shape shadow */
+}
+
+/* Hover Effects for WhatsApp Icon */
+.insta-icon:hover img {
+transform: scale(1.2); /* Slightly enlarges the icon */
+filter: drop-shadow(5px 5px 15px rgba(239, 2, 192, 0.8)); /* Greenish glow effect */
+}
+
+/* Adding a Pulse Glow Effect */
+.insta-icon:hover::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 50%; /* Matches the icon shape */
+border: 2px solid rgba(242, 4, 103, 0.5); /* Green WhatsApp color */
+animation: pulse 1.5s infinite ease-in-out;
+}
+.github-icon {
+  width: 90px;
+  height: 90px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Required for hover pseudo-elements */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling the WhatsApp Icon */
+.github-icon img {
+width: 100%;
+height: auto;
+border-radius: 50%; /* If you want a circular shape */
+transition: transform 0.3s ease, filter 0.3s ease;
+filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5)); /* Shape shadow */
+}
+
+/* Hover Effects for WhatsApp Icon */
+.github-icon:hover img {
+transform: scale(1.2); /* Slightly enlarges the icon */
+filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.8)); 
+}
+
+/* Adding a Pulse Glow Effect */
+.github-icon:hover::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 50%; /* Matches the icon shape */
+border: 2px solid rgba(0,0,0, 0.5); 
+animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+/* Pulse Keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}     
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .text-content {
+      margin-right: 0;
+      margin-bottom: 20px;
+      text-align: center; /* Center-align text for mobile view */
+    }
+  
+    .image-content img {
+      max-width: 200px; /* Scales image smaller for mobile */
+    }
+  }
+
+
+  .email-icon {
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Required for hover pseudo-elements */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .email-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%; /* If you want a circular shape */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5)); /* Shape shadow */
+  }
+  
+  /* Hover Effects for WhatsApp Icon */
+  .email-icon:hover img {
+    transform: scale(1.2); /* Slightly enlarges the icon */
+    filter: drop-shadow(5px 5px 15px rgba(211, 115, 37, 0.8)); /* Greenish glow effect */
+  }
+  
+  /* Adding a Pulse Glow Effect */
+  .email-icon:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Matches the icon shape */
+    border: 2px solid rgba(211, 115, 37, 0.5); /* Green WhatsApp color */
+    animation: pulse 1.5s infinite ease-in-out;
+  }
